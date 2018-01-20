@@ -1,0 +1,11 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.fontSize": 16,
+    "editor.fontSize": 16,
+    "editor.rulers": [
+        80
+    ],
+    "editor.wordWrap": "on"
+}
