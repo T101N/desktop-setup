@@ -24,5 +24,13 @@
     {
         "key": "ctrl+escape",
         "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "alt+s",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
     }
 ]
