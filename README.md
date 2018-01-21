@@ -1,2 +1,2 @@
 # desktop-setup
-Setup scripts for my personal desktop
+Scripts to set up a clean desktop install
