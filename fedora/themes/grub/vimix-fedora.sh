@@ -16,8 +16,11 @@ install_grub_theme() {
     # Copy theme files to grub themes directory
     cp -a ${THEME_SOURCE_DIR} ${GRUB_THEMES_DIR}
 
-    # Remove grub theme setting if any were previously set
-    sed -i '/GRUB_THEME=/d' ${GRUB_FILE}
+    # Comment out previous theme setting if any were previously set
+    sed -i 's/^\(GRUB_THEME=\)/#\1/' ${GRUB_FILE}
+    
+    # Comment out grub terminal output
+    sed -i 's/^\(GRUB_TERMINAL_OUTPUT=\)/#\1/' ${GRUB_FILE}
 
     # Add grub theme to grub file
     echo "GRUB_THEME=\"${GRUB_THEMES_DIR}/${GRUB_THEME_TXT}\"" >> ${GRUB_FILE}
