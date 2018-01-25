@@ -32,6 +32,6 @@ install_grub_theme() {
 if [ "$UID" -eq "$ROOT_UID" ]; then
     install_grub_theme
 else
-  echo -e "/n Please run this script by root..."
+  echo -e "Please run this script by root..."
   notify-send "Please run this script by root..." -i notification
 fi
