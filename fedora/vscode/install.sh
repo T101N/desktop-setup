@@ -10,9 +10,12 @@ sudo dnf check-update \
       && code --install-extension PeterJausovec.vscode-docker \
               --install-extension Zim.vsc-docker \
               --install-extension dbaeumer.vscode-eslint \
+              --install-extension donjayamanne.githistory \
+              --install-extension eamodio.gitlens \
               --install-extension formulahendry.code-runner \
               --install-extension jchannon.csharpextensions \
               --install-extension k--kato.intellij-idea-keybindings \
+              --install-extension ms-python.python \
               --install-extension ms-vscode.cpptools \
               --install-extension ms-vscode.csharp \
               --install-extension msjsdiag.debugger-for-chrome \
