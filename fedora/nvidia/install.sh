@@ -9,5 +9,5 @@ sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.re
   && sudo nvidia-xconfig --cool-bits=4
 
 # Set activate fan control and set fan speed (in %)
-FAN_SPEED=35
-echo "nvidia-settings -a \"[gpu:0]/GPUFanControlState=1\" -a \"[fan:0]/GPUTargetFanSpeed=$FAN_SPEED\"" >> ~/.profile
+echo "GPU_FAN_SPEED=35" >> ~/.profile
+echo "nvidia-settings -a \"[gpu:0]/GPUFanControlState=1\" -a \"[fan:0]/GPUTargetFanSpeed=\${GPU_FAN_SPEED}\"" >> ~/.profile
