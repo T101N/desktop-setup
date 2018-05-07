@@ -59,7 +59,7 @@ function downloadGitKraken() {
     if [[ ${1} = "--auto" ]]; then
         declare -r option="yes"
     else
-        option=$(promptYesNo "Download gitkraken archive (yes/no)[default: no]? " "no")
+        declare -r option=$(promptYesNo "Download gitkraken archive (yes/no)[default: no]? " "no")
     fi
 
     case "$(toLower ${option})" in
@@ -80,7 +80,7 @@ function setupDesktopFile() {
     if [[ ${1} = "--auto" ]]; then
         declare -r option="yes"
     else
-        option=$(promptYesNo "Set up shortcut in appliction launcher (yes/no)[default: no]? " "no")
+        declare -r option=$(promptYesNo "Set up shortcut in appliction launcher (yes/no)[default: no]? " "no")
     fi
 
     case "$(toLower ${option})" in
