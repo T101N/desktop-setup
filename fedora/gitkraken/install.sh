@@ -74,9 +74,9 @@ function downloadGitKraken() {
 }
 
 function setupDesktopFile() {
-    declare -r APPLICATION_DIRECTORY=~/.local/share/applictions
+    declare -r APPLICATION_DIRECTORY=/usr/share/applications
     declare -r DESKTOP_TARGET=${INSTALL_DIRECTORY}/gitkraken/gitkraken.desktop
-
+    declare -r LINK_LOCATION=${APPLICATION_DIRECTORY}/gitkraken.desktop
     if [[ ${1} = "--auto" ]]; then
         declare -r option="yes"
     else
@@ -87,7 +87,7 @@ function setupDesktopFile() {
         "yes")
             info "Creating shortcut in "
             cp ${DIR}/gitkraken.desktop ${DESKTOP_TARGET}
-            ln -s ${DESKTOP_TARGET} ${APPLICATION_DIRECTORY}
+            ln -s ${DESKTOP_TARGET} ${LINK_LOCATION}
             ;;
         "no")
             info "Skipping shortcut creation."
