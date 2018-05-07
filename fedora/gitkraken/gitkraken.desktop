@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gitkraken
+Exec=/opt/gitkraken/gitkraken
+Icon=gitkraken
+Type=Application
+Terminal=false
+
