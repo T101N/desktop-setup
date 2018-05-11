@@ -1,0 +1,13 @@
+#!/bin/sh
+
+## Fedora uses systemd but the answer here is a good starting point
+# https://askubuntu.com/questions/531882/high-fan-speed-after-suspend
+
+case "$1" in
+resume)
+    exec service fancontrol restart
+    ;;
+post)
+    exec service fancontrol restart
+    ;;
+esac
