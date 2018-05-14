@@ -1,0 +1,2 @@
+CONFIG_FILE=1-ds3-xboxdrv.ini
+DEVICE=/dev/input/event14
