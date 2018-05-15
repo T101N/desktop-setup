@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo dnf install \
+sudo dnf install -y \
     xorg-x11-drv-nvidia \
     xorg-x11-drv-nvidia-cuda
     akmod-nvidia \
@@ -8,9 +8,10 @@ sudo dnf install \
     nvidia-settings \
     nvidia-modprobe \
     nvidia-texture-tools \
+    nvidia-xconfig \
     vulkan-devel
 
-sudo dnf install \
+sudo dnf install -y \
     vdpauinfo \
     libva-vdpau-driver \
     libva-utils
