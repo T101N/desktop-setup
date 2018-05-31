@@ -9,6 +9,6 @@ headerbar separator {
 headerbar {
     min-height: 24px;
     /* max-height: 24px; */ /*this option doesn't appear to work*/
-    padding-left: 2px; /* same as childrens vertical margins for nicer proportions */
-    padding-right: 2px;
+    /*padding-left: 2px; *//* same as childrens vertical margins for nicer proportions */
+    /*padding-right: 2px;*/
 }

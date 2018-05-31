@@ -43,6 +43,9 @@ function main() {
     if [[ ! $@ = *"--skip-linking"* ]]; then
         linkLibraries
     fi
+
+    log "info" "Installation complete"
+    exit 0
 }
 
 function downloadGitKraken() {
@@ -114,7 +117,7 @@ function linkLibraries() {
     
     case "$(toLower ${option})" in
         "yes")
-            log "info" "Installing dependencies ..." 
+            log "info" "linking libraries ..." 
             ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl-gnutls.so.4
             ;;
         "no")
