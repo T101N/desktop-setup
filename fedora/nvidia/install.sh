@@ -2,7 +2,7 @@
 
 sudo dnf install -y \
     xorg-x11-drv-nvidia \
-    xorg-x11-drv-nvidia-cuda
+    xorg-x11-drv-nvidia-cuda \
     akmod-nvidia \
     kernel-devel \
     nvidia-settings \

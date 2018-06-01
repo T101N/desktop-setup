@@ -4,6 +4,6 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 # Installing this requires rpm fusion to be enabled for freetype-freeworld.
 DIR=$(dirname ${BASH_SOURCE[0]})
-sudo dnf install freetype-freeworld \
+sudo dnf install -y freetype-freeworld \
     && mkdir -p ~/.config/fontconfig \
     && cp ${DIR}/fonts.conf ~/.config/fontconfig
