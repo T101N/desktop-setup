@@ -12,6 +12,7 @@ sudo dnf check-update \
               --install-extension dbaeumer.vscode-eslint \
               --install-extension donjayamanne.githistory \
               --install-extension eamodio.gitlens \
+              --install-extension eriklynd.json-tools \
               --install-extension formulahendry.code-runner \
               --install-extension jchannon.csharpextensions \
               --install-extension k--kato.intellij-idea-keybindings \

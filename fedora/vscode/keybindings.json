@@ -32,5 +32,13 @@
     {
         "key": "ctrl+b",
         "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "shift+alt+m",
+        "command": "extension.prettyJSON"
+    },
+    {
+        "key": "ctrl+alt+m",
+        "command": "-extension.prettyJSON"
     }
 ]
