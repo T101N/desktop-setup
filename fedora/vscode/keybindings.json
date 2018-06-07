@@ -40,5 +40,13 @@
     {
         "key": "ctrl+alt+m",
         "command": "-extension.prettyJSON"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.closeFolder"
+    },
+    {
+        "key": "ctrl+k f",
+        "command": "-workbench.action.closeFolder"
     }
 ]
