@@ -1,14 +1,25 @@
 #!/bin/bash
 
 DIR=$(dirname ${BASH_SOURCE[0]})
+
 PULSE_CONFIG_DIR=/etc/pulse
 PULSE_DEFAULT_FILE=${PULSE_CONFIG_DIR}/default.pa
+PULSE_LOCAL_DEFAULT_FILE=~/.config/pulse/default.pa
+
 BACKUP_FILE=${PULSE_CONFIG_DIR}/default.pa.bak
 
 
 function main() {
-    backupPulseDefault
-    modifyPulseDefault
+    createLocalConfig
+    modifyLocalConfig
+}
+
+function createLocalConfig() {
+    cp ${PULSE_DEFAULT_FILE} ${PULSE_LOCAL_DEFAULT_FILE}
+}
+
+function modifyLocalConfig() {
+    disableSuspendOnIdle ${PULSE_LOCAL_DEFAULT_FILE}
 }
 
 function backupPulseDefault() {
@@ -32,13 +43,13 @@ function backupPulseDefault() {
 }
 
 function modifyPulseDefault() {
-    disableSuspendOnIdle
+    disableSuspendOnIdle ${PULSE_DEFAULT_FILE}
     info "MODIFICATION COMPLETE: $(diff ${BACKUP_FILE} ${PULSE_DEFAULT_FILE})"
 }
 
 function disableSuspendOnIdle() {
     info "DISABLING SUSPEND-ON-IDLE"
-    sed -i "s/^\(load-module module-suspend-on-idle.*\)/#\1/" ${PULSE_DEFAULT_FILE}
+    sed -i "s/^\(load-module module-suspend-on-idle.*\)/#\1/" ${1}
 }
 
 ## OUTPUT FUNCTIONS
