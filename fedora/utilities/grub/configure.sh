@@ -16,7 +16,7 @@ function main() {
     backupGrub
     setTimeout 1
     addGrubCmdValue clearcpuid=514
-    updateGrub
+    updateGrub ${GRUB_CFG}
 }
 
 function addGrubCmdValue() {
@@ -66,6 +66,7 @@ function backupGrub() {
 }
 
 function updateGrub() {
+    info "Updating grub ..."
     if [ ! -f ${1} ]; then
         error "FILE DOES NOT EXIST - ${1}"
         exit 1
