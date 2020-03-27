@@ -3,11 +3,11 @@
 # Install Docker
 #https://docs.docker.com/engine/installation/linux/docker-ce/fedora/
 
-# Empty for latest version
+# Empty for latest stable version
 DOCKER_VERSION=""
 #DOCKER_VERSION=-17.12.0.ce-1.fc27
 
-COMPOSE_VERSION="1.21.2"
+COMPOSE_VERSION="1.25.4"
 
 sudo dnf config-manager \
         --add-repo \
