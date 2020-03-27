@@ -3,7 +3,7 @@
 #####  Install nodejs  #####
 
 # Install guide - https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora
-NODE_VERSION=10.x
+NODE_VERSION=12.x
 curl --silent --location https://rpm.nodesource.com/setup_${NODE_VERSION} \
     | sudo bash - \
     && sudo dnf -y install nodejs \

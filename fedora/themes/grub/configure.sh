@@ -14,7 +14,7 @@ function main() {
 
     backupGrub
     setTimeout 1
-    # setAcpiEnforceResources lax
+    setAcpiEnforceResources lax
     updateGrub ${GRUB_CFG}
 }
 

@@ -5,7 +5,7 @@
 # Install vimix theme for fedora efi install
 ROOT_UID=0
 DIR=$(dirname ${BASH_SOURCE[0]})
-THEME_SOURCE_DIR=$DIR/grub2-themes/grub-themes-vimix/Vimix
+THEME_SOURCE_DIR=$DIR/grub2-themes/grub-theme-vimix/Vimix
 
 GRUB_FILE=/etc/default/grub
 GRUB_THEMES_DIR=/boot/grub2/themes
