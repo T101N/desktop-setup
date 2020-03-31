@@ -15,7 +15,10 @@ function main() {
 
     backupGrub
     setTimeout 1
-    addGrubCmdValue clearcpuid=514
+    addGrubCmdValue amd_iommu=on
+    addGrubCmdValue iommu=pt
+    addGrubCmdValue kvm_amd.npt=1
+    addGrubCmdValue kvm_amd.avic=1
     updateGrub ${GRUB_CFG}
 }
 
@@ -27,7 +30,6 @@ function addGrubCmdValue() {
         if [ ${#result} -gt 0 ]; then
             warn "Value (${1}) already exists"
             warn "Skipping step"
-            exit 1
         else
             sed -i "s/^\(GRUB_CMDLINE_LINUX=\"\)/\1${1} /" ${GRUB_FILE}
         fi
