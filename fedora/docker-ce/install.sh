@@ -13,7 +13,7 @@ sudo dnf config-manager \
         --add-repo \
         https://download.docker.com/linux/fedora/docker-ce.repo
 
-sudo dnf remove docker \
+sudo dnf remove -y docker \
                 docker-client \
                 docker-client-latest \
                 docker-common \
@@ -26,13 +26,13 @@ sudo dnf remove docker \
 
 # Version can be shown by using the `dnf list --showduplicates`
 #sudo dnf list docker-ce  --showduplicates | sort -r
-sudo dnf install docker-ce${DOCKER_VERSION}
+sudo dnf install -y docker-ce${DOCKER_VERSION}
 
 sudo systemctl enable docker
 sudo systemctl start docker
 
 # Append user to docker groups
-sudo usermod -a `whoami` -G docker
+sudo usermod -a ${USER} -G docker
 
 # Install docker-compose
 #https://docs.docker.com/compose/install/#install-compose

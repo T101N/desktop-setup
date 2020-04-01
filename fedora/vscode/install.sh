@@ -7,8 +7,7 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 
 sudo dnf check-update \
       && sudo dnf install -y code \
-      && code --install-extension PeterJausovec.vscode-docker \
-              --install-extension Zim.vsc-docker \
+      && code \
               --install-extension dbaeumer.vscode-eslint \
               --install-extension donjayamanne.githistory \
               --install-extension eamodio.gitlens \
@@ -18,9 +17,10 @@ sudo dnf check-update \
               --install-extension k--kato.intellij-idea-keybindings \
               --install-extension ms-python.python \
               --install-extension ms-vscode.cpptools \
-              --install-extension ms-vscode.csharp \
               --install-extension msjsdiag.debugger-for-chrome \
+              --install-extension ms-vscode.cmake-tools \
+              --install-extension ms-azuretools.vscode-docker \
               --install-extension octref.vetur \
-              --install-extension vector-of-bool.cmake-tools \
               --install-extension redhat.java \
-              --install-extension vscjava.vscode-java-debug
+              --install-extension vscjava.vscode-java-debug \
+              --install-extension Zim.vsc-docker 
