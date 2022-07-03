@@ -9,5 +9,4 @@ sudo dnf install -y dconf-editor \
   chrome-gnome-shell
 
 sudo dnf install -y cmake \
-  libsigc++-devel \
-  gtkmm30-devel
+  libsigc++-devel
