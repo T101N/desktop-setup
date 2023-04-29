@@ -1,0 +1,8 @@
+[Unit]
+Description=Lower NVidia GPU Power Limit
+
+[Service]
+ExecStart=/usr/bin/nvidia-smi --power-limit=160
+
+[Install]
+WantedBy=multi-user.target
