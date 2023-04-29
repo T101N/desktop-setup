@@ -2,6 +2,6 @@
 Type=Application
 Name=Postman
 Icon=postman
-Exec=/opt/postman/PostmanCanary
+Exec=/opt/postman/Postman/Postman
 Categories=Development;Test;API;
 Terminal=false
